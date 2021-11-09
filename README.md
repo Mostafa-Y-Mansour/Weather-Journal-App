@@ -10,4 +10,4 @@ to run this code on your local device you will need to install node.js, express.
 
 ## Extras
 
-Go to http://localhost:8000/ to run the app
+Go to http://localhost:8000/ to run the app locally
