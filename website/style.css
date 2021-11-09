@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, #00000070, #00000070), url("weather.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Cabin", sans-serif;
+}
+
+.holder {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.headline {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.zip,
+.feel {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.zip > input,
+.feel > .myInput,
+.btn,
+.entry,
+.status {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.502);
+  color: white;
+}
+
+.entry {
+  text-align: center;
+  width: 450px;
+  visibility: hidden;
+}
+
+.entry > #entryHolder {
+  margin-top: 20px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.entry > #entryHolder > div {
+  font-size: 0.9em;
+}
+
+.entry > #entryHolder > #city {
+  font-size: 1.8em;
+}
+
+.entry > #entryHolder > #temp {
+  font-size: 1.7em;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.btn:focus {
+  background-color: rgba(0, 0, 0, 0.314);
+}
+
+.zip > input:focus,
+.feel > .myInput:focus {
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.status {
+  width: fit-content;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  opacity: 0;
+}
+
+@media (max-width: 470px) {
+  .entry {
+    text-align: center;
+    width: 250px;
+  }
+
+  .entry > #entryHolder {
+    height: fit-content;
+    flex-wrap: nowrap;
+  }
+
+  .entry > #entryHolder > div {
+    margin: 5px;
+  }
+
+  .entry > #entryHolder > #city {
+    font-size: 1.5em;
+    order: 1;
+  }
+
+  .entry > #entryHolder > #temp {
+    font-size: 1.5em;
+    order: 2;
+  }
+
+  .entry > #entryHolder > #date {
+    order: 3;
+  }
+
+  .entry > #entryHolder > #content {
+    order: 4;
+  }
+
+  .entry > #entryHolder > #description {
+    order: 5;
+  }
+}
